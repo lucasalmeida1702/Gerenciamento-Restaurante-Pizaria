@@ -1,0 +1,44 @@
+\doxysection{Cozinheiro Class Reference}
+\hypertarget{class_cozinheiro}{}\label{class_cozinheiro}\index{Cozinheiro@{Cozinheiro}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cozinheiro_a01b41459ea6418da8d8b70f4347411c0}\label{class_cozinheiro_a01b41459ea6418da8d8b70f4347411c0} 
+{\bfseries Cozinheiro} (std\+::vector$<$ \mbox{\hyperlink{class_pedido}{Pedido}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}pedidos\+Ref)
+\item 
+void \mbox{\hyperlink{class_cozinheiro_a2ad3bf47edc3750c21e73bc578c872fc}{exibir\+Pedidos\+Pendentes}} () const
+\item 
+void \mbox{\hyperlink{class_cozinheiro_ac0f36981f086f9ada1191673f9f95e53}{marcar\+Pedido\+Preparado}} (int indice\+Pedido)
+\item 
+void \mbox{\hyperlink{class_cozinheiro_a9b3e1aedbe3c9a7f98b6a0dd5d76ed9e}{actions\+\_\+cozinheiro}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cozinheiro_a9b3e1aedbe3c9a7f98b6a0dd5d76ed9e}\index{Cozinheiro@{Cozinheiro}!actions\_cozinheiro@{actions\_cozinheiro}}
+\index{actions\_cozinheiro@{actions\_cozinheiro}!Cozinheiro@{Cozinheiro}}
+\doxysubsubsection{\texorpdfstring{actions\_cozinheiro()}{actions\_cozinheiro()}}
+{\footnotesize\ttfamily \label{class_cozinheiro_a9b3e1aedbe3c9a7f98b6a0dd5d76ed9e} 
+void Cozinheiro\+::actions\+\_\+cozinheiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_cozinheiro_a9b3e1aedbe3c9a7f98b6a0dd5d76ed9e}{Cozinheiro\+::actions\+\_\+cozinheiro()} \{ int opcao; do \{ print\+Line(); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} BOLD \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Bem vindo Cozinheiro"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}1. Ver pedidos pendentes"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}2. Marcar pedido como pronto"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}3. Sair"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; print\+Line();
+
+opcao = validar\+Entrada\+Numerica();
+
+if (opcao == 1) \{ \doxylink{class_cozinheiro_a2ad3bf47edc3750c21e73bc578c872fc}{exibir\+Pedidos\+Pendentes()}; \} else if (opcao == 2) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Digite o numero do pedido que estiver pronto\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET; int num = validar\+Entrada\+Numerica(); marcar\+Pedido\+Preparado(num); \} \} while (opcao != 3); \} \Hypertarget{class_cozinheiro_a2ad3bf47edc3750c21e73bc578c872fc}\index{Cozinheiro@{Cozinheiro}!exibirPedidosPendentes@{exibirPedidosPendentes}}
+\index{exibirPedidosPendentes@{exibirPedidosPendentes}!Cozinheiro@{Cozinheiro}}
+\doxysubsubsection{\texorpdfstring{exibirPedidosPendentes()}{exibirPedidosPendentes()}}
+{\footnotesize\ttfamily \label{class_cozinheiro_a2ad3bf47edc3750c21e73bc578c872fc} 
+void Cozinheiro\+::exibir\+Pedidos\+Pendentes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+void \doxylink{class_cozinheiro_a2ad3bf47edc3750c21e73bc578c872fc}{Cozinheiro\+::exibir\+Pedidos\+Pendentes() const }\{ print\+Line(); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} BOLD \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Lista de pedidos pendentes\+:"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; int count = 1; for (auto\& pedido \+: \texorpdfstring{$\ast$}{*}pedidos) \{ if (pedido-\/\texorpdfstring{$>$}{>}get\+Status() == "{}\+Pedido feito"{}) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} count++ \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}. Pedido de "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} pedido-\/\texorpdfstring{$>$}{>}get\+Cliente() \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{} -\/ Itens\+: "{}; for (const auto\& item \+: pedido-\/\texorpdfstring{$>$}{>}get\+Itens()) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+quantidade \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}x "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+nome \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}, "{}; \} std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\textbackslash{}n"{}; \} \} if (count == 1) std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Nenhum pedido pendente."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; print\+Line(); \} \Hypertarget{class_cozinheiro_ac0f36981f086f9ada1191673f9f95e53}\index{Cozinheiro@{Cozinheiro}!marcarPedidoPreparado@{marcarPedidoPreparado}}
+\index{marcarPedidoPreparado@{marcarPedidoPreparado}!Cozinheiro@{Cozinheiro}}
+\doxysubsubsection{\texorpdfstring{marcarPedidoPreparado()}{marcarPedidoPreparado()}}
+{\footnotesize\ttfamily \label{class_cozinheiro_ac0f36981f086f9ada1191673f9f95e53} 
+void Cozinheiro\+::marcar\+Pedido\+Preparado (\begin{DoxyParamCaption}\item[{int}]{indice\+Pedido}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_cozinheiro_ac0f36981f086f9ada1191673f9f95e53}{Cozinheiro\+::marcar\+Pedido\+Preparado(int indice\+Pedido)} \{ int count = 0; for (auto\& pedido \+: \texorpdfstring{$\ast$}{*}pedidos) \{ if (pedido-\/\texorpdfstring{$>$}{>}get\+Status() == "{}\+Pedido feito"{}) \{ count++; if (count == indice\+Pedido) \{ pedido-\/\texorpdfstring{$>$}{>}atualizar\+Status("{}\+Pedido pronto"{}); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Preparado\+: "{}; for (const auto\& item \+: pedido-\/\texorpdfstring{$>$}{>}get\+Itens()) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+quantidade \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}x "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+nome \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}, "{}; \} std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}para "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} pedido-\/\texorpdfstring{$>$}{>}get\+Cliente() \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; return; \} \} \} std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Pedido nao encontrado."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+PROJETO/hpp/Cozinheiro.\+hpp\end{DoxyCompactItemize}

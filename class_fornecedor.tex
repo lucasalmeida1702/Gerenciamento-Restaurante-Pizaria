@@ -1,0 +1,62 @@
+\doxysection{Fornecedor Class Reference}
+\hypertarget{class_fornecedor}{}\label{class_fornecedor}\index{Fornecedor@{Fornecedor}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_fornecedor_1_1_info}{Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fornecedor_adf594315351e73c8edf45c16aac004ee}{cadastrar\+Fornecedor}} (const std\+::string \&nome, const std\+::string \&produto, const std\+::string \&endereco, const std\+::string \&telefone)
+\item 
+void \mbox{\hyperlink{class_fornecedor_a55afa9151361ef537812348a3bac15ea}{editar\+Fornecedor\+Por\+Indice}} (int indice)
+\item 
+void \mbox{\hyperlink{class_fornecedor_aa6e3e4d03a3071adb4789f694a3ed127}{excluir\+Fornecedor}} (const std\+::string \&nome)
+\item 
+void \mbox{\hyperlink{class_fornecedor_a8dac2706f6321af8db93869bb7c58e36}{exibir\+Fornecedores}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_fornecedor_adf594315351e73c8edf45c16aac004ee}\index{Fornecedor@{Fornecedor}!cadastrarFornecedor@{cadastrarFornecedor}}
+\index{cadastrarFornecedor@{cadastrarFornecedor}!Fornecedor@{Fornecedor}}
+\doxysubsubsection{\texorpdfstring{cadastrarFornecedor()}{cadastrarFornecedor()}}
+{\footnotesize\ttfamily \label{class_fornecedor_adf594315351e73c8edf45c16aac004ee} 
+void Fornecedor\+::cadastrar\+Fornecedor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{, }\item[{const std\+::string \&}]{produto}{, }\item[{const std\+::string \&}]{endereco}{, }\item[{const std\+::string \&}]{telefone}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_fornecedor_adf594315351e73c8edf45c16aac004ee}{Fornecedor\+::cadastrar\+Fornecedor(const std\+::string\& nome, const std\+::string\& produto, const std\+::string\& endereco, const std\+::string\& telefone)} \{ fornecedores.\+push\+\_\+back(\{ nome, produto, endereco, telefone \}); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Fornecedor cadastrado."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} \Hypertarget{class_fornecedor_a55afa9151361ef537812348a3bac15ea}\index{Fornecedor@{Fornecedor}!editarFornecedorPorIndice@{editarFornecedorPorIndice}}
+\index{editarFornecedorPorIndice@{editarFornecedorPorIndice}!Fornecedor@{Fornecedor}}
+\doxysubsubsection{\texorpdfstring{editarFornecedorPorIndice()}{editarFornecedorPorIndice()}}
+{\footnotesize\ttfamily \label{class_fornecedor_a55afa9151361ef537812348a3bac15ea} 
+void Fornecedor\+::editar\+Fornecedor\+Por\+Indice (\begin{DoxyParamCaption}\item[{int}]{indice}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_fornecedor_a55afa9151361ef537812348a3bac15ea}{Fornecedor\+::editar\+Fornecedor\+Por\+Indice(int indice)} \{ if (indice \texorpdfstring{$<$}{<} 1 \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} indice \texorpdfstring{$>$}{>}(int)fornecedores.\+size()) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Indice invalido."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; return; \}
+
+\doxylink{struct_fornecedor_1_1_info}{Info}\& f = fornecedores\mbox{[}indice -\/ 1\mbox{]}; std\+::string novo\+Produto, novo\+Endereco, novo\+Telefone;
+
+std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Para manter o valor atual, digite "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}manter"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl;
+
+std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Produto atual\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+produto \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Digite o novo produto\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET; std\+::getline(std\+::cin, novo\+Produto); if (novo\+Produto != "{}manter"{}) f.\+produto = novo\+Produto;
+
+std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Endereco atual\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+endereco \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Digite o novo endereco\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET; std\+::getline(std\+::cin, novo\+Endereco); if (novo\+Endereco != "{}manter"{}) f.\+endereco = novo\+Endereco;
+
+std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Telefone atual\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+telefone \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Digite o novo telefone\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET; std\+::getline(std\+::cin, novo\+Telefone); if (novo\+Telefone != "{}manter"{}) f.\+telefone = novo\+Telefone;
+
+std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Fornecedor editado."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} \Hypertarget{class_fornecedor_aa6e3e4d03a3071adb4789f694a3ed127}\index{Fornecedor@{Fornecedor}!excluirFornecedor@{excluirFornecedor}}
+\index{excluirFornecedor@{excluirFornecedor}!Fornecedor@{Fornecedor}}
+\doxysubsubsection{\texorpdfstring{excluirFornecedor()}{excluirFornecedor()}}
+{\footnotesize\ttfamily \label{class_fornecedor_aa6e3e4d03a3071adb4789f694a3ed127} 
+void Fornecedor\+::excluir\+Fornecedor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_fornecedor_aa6e3e4d03a3071adb4789f694a3ed127}{Fornecedor\+::excluir\+Fornecedor(const std\+::string\& nome)} \{ auto it = std\+::remove\+\_\+if(fornecedores.\+begin(), fornecedores.\+end(), \mbox{[}\&\mbox{]}(const \doxylink{struct_fornecedor_1_1_info}{Info}\& f) \{ return f.\+nome == nome; \}); if (it != fornecedores.\+end()) \{ fornecedores.\+erase(it, fornecedores.\+end()); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Fornecedor excluido."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} else \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Fornecedor nao encontrado."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} \} \Hypertarget{class_fornecedor_a8dac2706f6321af8db93869bb7c58e36}\index{Fornecedor@{Fornecedor}!exibirFornecedores@{exibirFornecedores}}
+\index{exibirFornecedores@{exibirFornecedores}!Fornecedor@{Fornecedor}}
+\doxysubsubsection{\texorpdfstring{exibirFornecedores()}{exibirFornecedores()}}
+{\footnotesize\ttfamily \label{class_fornecedor_a8dac2706f6321af8db93869bb7c58e36} 
+void Fornecedor\+::exibir\+Fornecedores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+void \doxylink{class_fornecedor_a8dac2706f6321af8db93869bb7c58e36}{Fornecedor\+::exibir\+Fornecedores() const }\{ print\+Line(); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} BOLD \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Lista de fornecedores\+:"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; for (size\+\_\+t i = 0; i \texorpdfstring{$<$}{<} fornecedores.\+size(); ++i) \{ const auto\& f = fornecedores\mbox{[}i\mbox{]}; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+AZUL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} i + 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}. Fornecedor de\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} BOLD \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+produto \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Nome\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+nome \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Produto\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+produto \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Endereco\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+endereco \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Telefone\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} f.\+telefone \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{} "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} \} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+PROJETO/hpp/Fornecedor.\+hpp\end{DoxyCompactItemize}

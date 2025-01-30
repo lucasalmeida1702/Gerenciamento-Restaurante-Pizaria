@@ -1,0 +1,34 @@
+\doxysection{Dono\+Restaurante.\+hpp}
+\hypertarget{_dono_restaurante_8hpp_source}{}\label{_dono_restaurante_8hpp_source}\index{PROJETO/hpp/DonoRestaurante.hpp@{PROJETO/hpp/DonoRestaurante.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DONORESTAURANTE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DONORESTAURANTE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Cardapio.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Fornecedor.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Pedido.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Relatorio.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}utils.hpp"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }DonoRestaurante\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_cardapio}{Cardapio}}*\ cardapio;}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_fornecedor}{Fornecedor}}\ fornecedor;}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<Pedido*>\&\ pedidos;}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ senha;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_relatorio}{Relatorio}}\ relatorio;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ verificarSenha();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ DonoRestaurante(\mbox{\hyperlink{class_cardapio}{Cardapio}}*\ card,\ std::vector<Pedido*>\&\ pedidosRef);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dono_restaurante_a3a76cb67c46fba164bf2a152c641aa85}{mudarSenha}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dono_restaurante_a12d1014bef32516d98c874cc36b14001}{actions\_dono}}(\textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ clientes);}
+\DoxyCodeLine{00153\ \};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DONORESTAURANTE\_HPP}}
+
+\end{DoxyCode}

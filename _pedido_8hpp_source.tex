@@ -1,0 +1,42 @@
+\doxysection{Pedido.\+hpp}
+\hypertarget{_pedido_8hpp_source}{}\label{_pedido_8hpp_source}\index{PROJETO/hpp/Pedido.hpp@{PROJETO/hpp/Pedido.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PEDIDO\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PEDIDO\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Cardapio.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}utils.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pedido_a91bd2499d622cec227d2c2603be35a21}{Pedido}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{struct\ }ItemPedido\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ std::string\ nome;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ preco;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade;}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ cliente;}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ endereco;}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<ItemPedido>\ itens;}
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ status;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_pedido_a91bd2499d622cec227d2c2603be35a21}{Pedido}}(\textcolor{keyword}{const}\ std::string\&\ cli,\ \textcolor{keyword}{const}\ std::string\&\ end);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pedido_ad2c7dc1d9c6d735e71ef84daa7b01e72}{addItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_cardapio_1_1_item}{Cardapio::Item}}\&\ item,\ \textcolor{keywordtype}{int}\ quantidade);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pedido_ad972d758a8458c698b7b215f55ab959a}{setEndereco}}(\textcolor{keyword}{const}\ std::string\&\ end);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pedido_aa997f0cffecc29c00976e69245d4c809}{cancelaPedido}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pedido_a7f317fb4f967e301548a5557b9985226}{atualizarStatus}}(\textcolor{keyword}{const}\ std::string\&\ novoStatus);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ getStatus()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ getCliente()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ getEndereco()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<ItemPedido>\&\ getItens()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pedido_ac3d5ebb24585b3b48c8cea481d9e612b}{exibirResumo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pedido_ac8b003ce419d72b86a57292be8bcc16a}{exibirDetalhes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PEDIDO\_HPP}}
+
+\end{DoxyCode}

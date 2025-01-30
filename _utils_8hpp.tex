@@ -1,0 +1,115 @@
+\doxysection{PROJETO/\+Utils.hpp File Reference}
+\hypertarget{_utils_8hpp}{}\label{_utils_8hpp}\index{PROJETO/Utils.hpp@{PROJETO/Utils.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_ab702106cf3b3e96750b6845ded4e0299}{RESET}}~"{}\textbackslash{}033\mbox{[}0m"{}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_a26cdbb1a00213c810caccf21cd33a631}{BOLD}}~"{}\textbackslash{}033\mbox{[}1m"{}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_aaec1a65734e33bc49e8dc8d90e9546bc}{UNDERLINE}}~"{}\textbackslash{}033\mbox{[}4m"{}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_a403312bb540b03aaacfef711bf745d7e}{FG\+\_\+\+CIANO}}~"{}\textbackslash{}033\mbox{[}36m"{}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_a45715f112e3c4a6bb5650c44f525c9ee}{FG\+\_\+\+VERDE}}~"{}\textbackslash{}033\mbox{[}32m"{}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_abc2ccf1254610e0fa730ab46ad70e496}{FG\+\_\+\+BRANCO}}~"{}\textbackslash{}033\mbox{[}37m"{}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_a3d09d23196db30a6cc023f8268685715}{FG\+\_\+\+VERMELHO}}~"{}\textbackslash{}033\mbox{[}31m"{}
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_a51499bbfb7145f57c7d0a6e3101fa532}{FG\+\_\+\+AZUL}}~"{}\textbackslash{}033\mbox{[}34m"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_utils_8hpp_a22f0047ca1e195cb409fbb3540cb86e7}{print\+Line}} ()
+\item 
+int \mbox{\hyperlink{_utils_8hpp_a1dbba58a2b48bf56f644dbf089f4bf74}{validar\+Entrada\+Numerica}} ()
+\item 
+bool \mbox{\hyperlink{_utils_8hpp_a2b45f212c537bb5f2d606432d27e201b}{validar\+Entrada\+Sim\+Nao}} (const std\+::string \&entrada)
+\item 
+bool \mbox{\hyperlink{_utils_8hpp_ac002b83a992998b8e343344e03de8aa4}{validar\+Senha}} (const std\+::string \&Senha\+Nova)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_utils_8hpp_a26cdbb1a00213c810caccf21cd33a631}\index{Utils.hpp@{Utils.hpp}!BOLD@{BOLD}}
+\index{BOLD@{BOLD}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{BOLD}{BOLD}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a26cdbb1a00213c810caccf21cd33a631} 
+\#define BOLD~"{}\textbackslash{}033\mbox{[}1m"{}}
+
+\Hypertarget{_utils_8hpp_a51499bbfb7145f57c7d0a6e3101fa532}\index{Utils.hpp@{Utils.hpp}!FG\_AZUL@{FG\_AZUL}}
+\index{FG\_AZUL@{FG\_AZUL}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{FG\_AZUL}{FG\_AZUL}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a51499bbfb7145f57c7d0a6e3101fa532} 
+\#define FG\+\_\+\+AZUL~"{}\textbackslash{}033\mbox{[}34m"{}}
+
+\Hypertarget{_utils_8hpp_abc2ccf1254610e0fa730ab46ad70e496}\index{Utils.hpp@{Utils.hpp}!FG\_BRANCO@{FG\_BRANCO}}
+\index{FG\_BRANCO@{FG\_BRANCO}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{FG\_BRANCO}{FG\_BRANCO}}
+{\footnotesize\ttfamily \label{_utils_8hpp_abc2ccf1254610e0fa730ab46ad70e496} 
+\#define FG\+\_\+\+BRANCO~"{}\textbackslash{}033\mbox{[}37m"{}}
+
+\Hypertarget{_utils_8hpp_a403312bb540b03aaacfef711bf745d7e}\index{Utils.hpp@{Utils.hpp}!FG\_CIANO@{FG\_CIANO}}
+\index{FG\_CIANO@{FG\_CIANO}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{FG\_CIANO}{FG\_CIANO}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a403312bb540b03aaacfef711bf745d7e} 
+\#define FG\+\_\+\+CIANO~"{}\textbackslash{}033\mbox{[}36m"{}}
+
+\Hypertarget{_utils_8hpp_a45715f112e3c4a6bb5650c44f525c9ee}\index{Utils.hpp@{Utils.hpp}!FG\_VERDE@{FG\_VERDE}}
+\index{FG\_VERDE@{FG\_VERDE}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{FG\_VERDE}{FG\_VERDE}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a45715f112e3c4a6bb5650c44f525c9ee} 
+\#define FG\+\_\+\+VERDE~"{}\textbackslash{}033\mbox{[}32m"{}}
+
+\Hypertarget{_utils_8hpp_a3d09d23196db30a6cc023f8268685715}\index{Utils.hpp@{Utils.hpp}!FG\_VERMELHO@{FG\_VERMELHO}}
+\index{FG\_VERMELHO@{FG\_VERMELHO}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{FG\_VERMELHO}{FG\_VERMELHO}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a3d09d23196db30a6cc023f8268685715} 
+\#define FG\+\_\+\+VERMELHO~"{}\textbackslash{}033\mbox{[}31m"{}}
+
+\Hypertarget{_utils_8hpp_ab702106cf3b3e96750b6845ded4e0299}\index{Utils.hpp@{Utils.hpp}!RESET@{RESET}}
+\index{RESET@{RESET}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{RESET}{RESET}}
+{\footnotesize\ttfamily \label{_utils_8hpp_ab702106cf3b3e96750b6845ded4e0299} 
+\#define RESET~"{}\textbackslash{}033\mbox{[}0m"{}}
+
+\Hypertarget{_utils_8hpp_aaec1a65734e33bc49e8dc8d90e9546bc}\index{Utils.hpp@{Utils.hpp}!UNDERLINE@{UNDERLINE}}
+\index{UNDERLINE@{UNDERLINE}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{UNDERLINE}{UNDERLINE}}
+{\footnotesize\ttfamily \label{_utils_8hpp_aaec1a65734e33bc49e8dc8d90e9546bc} 
+\#define UNDERLINE~"{}\textbackslash{}033\mbox{[}4m"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_utils_8hpp_a22f0047ca1e195cb409fbb3540cb86e7}\index{Utils.hpp@{Utils.hpp}!printLine@{printLine}}
+\index{printLine@{printLine}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{printLine()}{printLine()}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a22f0047ca1e195cb409fbb3540cb86e7} 
+void print\+Line (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_utils_8hpp_a1dbba58a2b48bf56f644dbf089f4bf74}\index{Utils.hpp@{Utils.hpp}!validarEntradaNumerica@{validarEntradaNumerica}}
+\index{validarEntradaNumerica@{validarEntradaNumerica}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{validarEntradaNumerica()}{validarEntradaNumerica()}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a1dbba58a2b48bf56f644dbf089f4bf74} 
+int validar\+Entrada\+Numerica (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_utils_8hpp_a2b45f212c537bb5f2d606432d27e201b}\index{Utils.hpp@{Utils.hpp}!validarEntradaSimNao@{validarEntradaSimNao}}
+\index{validarEntradaSimNao@{validarEntradaSimNao}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{validarEntradaSimNao()}{validarEntradaSimNao()}}
+{\footnotesize\ttfamily \label{_utils_8hpp_a2b45f212c537bb5f2d606432d27e201b} 
+bool validar\+Entrada\+Sim\+Nao (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{entrada}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_utils_8hpp_ac002b83a992998b8e343344e03de8aa4}\index{Utils.hpp@{Utils.hpp}!validarSenha@{validarSenha}}
+\index{validarSenha@{validarSenha}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{validarSenha()}{validarSenha()}}
+{\footnotesize\ttfamily \label{_utils_8hpp_ac002b83a992998b8e343344e03de8aa4} 
+bool validar\+Senha (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Senha\+Nova}{}\end{DoxyParamCaption})}
+

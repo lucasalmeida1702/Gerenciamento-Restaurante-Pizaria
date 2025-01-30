@@ -1,0 +1,53 @@
+\doxysection{Cardapio Class Reference}
+\hypertarget{class_cardapio}{}\label{class_cardapio}\index{Cardapio@{Cardapio}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cardapio_1_1_item}{Item}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cardapio_ae11143605886b09e77e792fe05ba88d7}{adicionar\+Item}} (const std\+::string \&nome, const std\+::string \&descricao, double preco)
+\item 
+void \mbox{\hyperlink{class_cardapio_a62d53a430c64844bc355419551d4d1c6}{remover\+Item}} (const std\+::string \&nome)
+\item 
+void \mbox{\hyperlink{class_cardapio_ab80e54976a3a71214179e452560c1a3e}{editar\+Preco\+Item}} (const std\+::string \&nome, double novo\+Preco)
+\item 
+void \mbox{\hyperlink{class_cardapio_ac6f47639002d2fbbb51579c20a2668d8}{exibir\+Cardapio}} () const
+\item 
+\Hypertarget{class_cardapio_a63b26f1bae72a4d6daea8185c052efa4}\label{class_cardapio_a63b26f1bae72a4d6daea8185c052efa4} 
+const std\+::vector$<$ \mbox{\hyperlink{struct_cardapio_1_1_item}{Item}} $>$ \& {\bfseries get\+Itens} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cardapio_ae11143605886b09e77e792fe05ba88d7}\index{Cardapio@{Cardapio}!adicionarItem@{adicionarItem}}
+\index{adicionarItem@{adicionarItem}!Cardapio@{Cardapio}}
+\doxysubsubsection{\texorpdfstring{adicionarItem()}{adicionarItem()}}
+{\footnotesize\ttfamily \label{class_cardapio_ae11143605886b09e77e792fe05ba88d7} 
+void Cardapio\+::adicionar\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{, }\item[{const std\+::string \&}]{descricao}{, }\item[{double}]{preco}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_cardapio_ae11143605886b09e77e792fe05ba88d7}{Cardapio\+::adicionar\+Item(const std\+::string\& nome, const std\+::string\& descricao, double preco)} \{ itens.\+push\+\_\+back(\{ nome, descricao, preco \});\} \Hypertarget{class_cardapio_ab80e54976a3a71214179e452560c1a3e}\index{Cardapio@{Cardapio}!editarPrecoItem@{editarPrecoItem}}
+\index{editarPrecoItem@{editarPrecoItem}!Cardapio@{Cardapio}}
+\doxysubsubsection{\texorpdfstring{editarPrecoItem()}{editarPrecoItem()}}
+{\footnotesize\ttfamily \label{class_cardapio_ab80e54976a3a71214179e452560c1a3e} 
+void Cardapio\+::editar\+Preco\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{, }\item[{double}]{novo\+Preco}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_cardapio_ab80e54976a3a71214179e452560c1a3e}{Cardapio\+::editar\+Preco\+Item(const std\+::string\& nome, double novo\+Preco)} \{ for (auto\& item \+: itens) \{ if (item.\+nome == nome) \{ item.\+preco = novo\+Preco; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Preco atualizado com sucesso!"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; return;\} \} std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Item nao encontrado."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl;\} \Hypertarget{class_cardapio_ac6f47639002d2fbbb51579c20a2668d8}\index{Cardapio@{Cardapio}!exibirCardapio@{exibirCardapio}}
+\index{exibirCardapio@{exibirCardapio}!Cardapio@{Cardapio}}
+\doxysubsubsection{\texorpdfstring{exibirCardapio()}{exibirCardapio()}}
+{\footnotesize\ttfamily \label{class_cardapio_ac6f47639002d2fbbb51579c20a2668d8} 
+void Cardapio\+::exibir\+Cardapio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+void \doxylink{class_cardapio_ac6f47639002d2fbbb51579c20a2668d8}{Cardapio\+::exibir\+Cardapio() const }\{ print\+Line(); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} BOLD \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}             CARDAPIO"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; print\+Line(); for (size\+\_\+t i = 0; i \texorpdfstring{$<$}{<} itens.\+size(); ++i) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} i + 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}. "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} itens\mbox{[}i\mbox{]}.nome \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{} -\/ "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} itens\mbox{[}i\mbox{]}.descricao \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{} -\/ R\$"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} itens\mbox{[}i\mbox{]}.preco \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\textbackslash{}n"{};\} print\+Line();\} \Hypertarget{class_cardapio_a62d53a430c64844bc355419551d4d1c6}\index{Cardapio@{Cardapio}!removerItem@{removerItem}}
+\index{removerItem@{removerItem}!Cardapio@{Cardapio}}
+\doxysubsubsection{\texorpdfstring{removerItem()}{removerItem()}}
+{\footnotesize\ttfamily \label{class_cardapio_a62d53a430c64844bc355419551d4d1c6} 
+void Cardapio\+::remover\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_cardapio_a62d53a430c64844bc355419551d4d1c6}{Cardapio\+::remover\+Item(const std\+::string\& nome)} \{ auto it = std\+::remove\+\_\+if(itens.\+begin(), itens.\+end(), \mbox{[}\&\mbox{]}(const \doxylink{struct_cardapio_1_1_item}{Item}\& item) \{ return item.\+nome == nome; \}); if (it != itens.\+end()) \{ itens.\+erase(it, itens.\+end()); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Item removido com sucesso."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl;\} else \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Item nao encontrado."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl;\} \} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+PROJETO/hpp/Cardapio.\+hpp\end{DoxyCompactItemize}

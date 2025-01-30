@@ -1,0 +1,76 @@
+\doxysection{Pedido Class Reference}
+\hypertarget{class_pedido}{}\label{class_pedido}\index{Pedido@{Pedido}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pedido_a91bd2499d622cec227d2c2603be35a21}\label{class_pedido_a91bd2499d622cec227d2c2603be35a21} 
+{\bfseries Pedido} (const std\+::string \&cli, const std\+::string \&end)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<}\doxylink{class_pedido_a91bd2499d622cec227d2c2603be35a21}{Pedido\+::\+Pedido(const std\+::string\& cli, const std\+::string\& end)} \+: cliente(cli), endereco(end), status("{}\+Pedido feito"{}) \{\} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pedido_ad2c7dc1d9c6d735e71ef84daa7b01e72}{add\+Item}} (const \mbox{\hyperlink{struct_cardapio_1_1_item}{Cardapio\+::\+Item}} \&item, int quantidade)
+\item 
+void \mbox{\hyperlink{class_pedido_ad972d758a8458c698b7b215f55ab959a}{set\+Endereco}} (const std\+::string \&end)
+\item 
+void \mbox{\hyperlink{class_pedido_aa997f0cffecc29c00976e69245d4c809}{cancela\+Pedido}} ()
+\item 
+void \mbox{\hyperlink{class_pedido_a7f317fb4f967e301548a5557b9985226}{atualizar\+Status}} (const std\+::string \&novo\+Status)
+\item 
+\Hypertarget{class_pedido_aac50645f67f58e12148efaf511f59cef}\label{class_pedido_aac50645f67f58e12148efaf511f59cef} 
+const std\+::string \& {\bfseries get\+Status} () const
+\item 
+\Hypertarget{class_pedido_af9219bdc23edac745aedb03c210dbd90}\label{class_pedido_af9219bdc23edac745aedb03c210dbd90} 
+const std\+::string \& {\bfseries get\+Cliente} () const
+\item 
+\Hypertarget{class_pedido_a217342c219f54a4b1b3824a7a0fd3ea6}\label{class_pedido_a217342c219f54a4b1b3824a7a0fd3ea6} 
+const std\+::string \& {\bfseries get\+Endereco} () const
+\item 
+\Hypertarget{class_pedido_a0e5eb3df95842aa26b0be8d830b62dab}\label{class_pedido_a0e5eb3df95842aa26b0be8d830b62dab} 
+const std\+::vector$<$ Item\+Pedido $>$ \& {\bfseries get\+Itens} () const
+\item 
+void \mbox{\hyperlink{class_pedido_ac3d5ebb24585b3b48c8cea481d9e612b}{exibir\+Resumo}} () const
+\item 
+void \mbox{\hyperlink{class_pedido_ac8b003ce419d72b86a57292be8bcc16a}{exibir\+Detalhes}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pedido_ad2c7dc1d9c6d735e71ef84daa7b01e72}\index{Pedido@{Pedido}!addItem@{addItem}}
+\index{addItem@{addItem}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily \label{class_pedido_ad2c7dc1d9c6d735e71ef84daa7b01e72} 
+void Pedido\+::add\+Item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_cardapio_1_1_item}{Cardapio\+::\+Item}} \&}]{item}{, }\item[{int}]{quantidade}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_pedido_ad2c7dc1d9c6d735e71ef84daa7b01e72}{Pedido\+::add\+Item(const Cardapio\+::\+Item\& item, int quantidade)} \{ itens.\+push\+\_\+back(\{ item.\+nome, item.\+preco, quantidade \}); \} \Hypertarget{class_pedido_a7f317fb4f967e301548a5557b9985226}\index{Pedido@{Pedido}!atualizarStatus@{atualizarStatus}}
+\index{atualizarStatus@{atualizarStatus}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{atualizarStatus()}{atualizarStatus()}}
+{\footnotesize\ttfamily \label{class_pedido_a7f317fb4f967e301548a5557b9985226} 
+void Pedido\+::atualizar\+Status (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{novo\+Status}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_pedido_a7f317fb4f967e301548a5557b9985226}{Pedido\+::atualizar\+Status(const std\+::string\& novo\+Status)} \{ status = novo\+Status; \} \Hypertarget{class_pedido_aa997f0cffecc29c00976e69245d4c809}\index{Pedido@{Pedido}!cancelaPedido@{cancelaPedido}}
+\index{cancelaPedido@{cancelaPedido}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{cancelaPedido()}{cancelaPedido()}}
+{\footnotesize\ttfamily \label{class_pedido_aa997f0cffecc29c00976e69245d4c809} 
+void Pedido\+::cancela\+Pedido (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_pedido_aa997f0cffecc29c00976e69245d4c809}{Pedido\+::cancela\+Pedido()} \{ status = "{}\+Cancelado"{}; \} \Hypertarget{class_pedido_ac8b003ce419d72b86a57292be8bcc16a}\index{Pedido@{Pedido}!exibirDetalhes@{exibirDetalhes}}
+\index{exibirDetalhes@{exibirDetalhes}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{exibirDetalhes()}{exibirDetalhes()}}
+{\footnotesize\ttfamily \label{class_pedido_ac8b003ce419d72b86a57292be8bcc16a} 
+void Pedido\+::exibir\+Detalhes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+void \doxylink{class_pedido_ac8b003ce419d72b86a57292be8bcc16a}{Pedido\+::exibir\+Detalhes() const }\{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Cliente\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} cliente \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; for (const auto\& item \+: itens) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+quantidade \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}x "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+nome \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Status\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} status \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} \Hypertarget{class_pedido_ac3d5ebb24585b3b48c8cea481d9e612b}\index{Pedido@{Pedido}!exibirResumo@{exibirResumo}}
+\index{exibirResumo@{exibirResumo}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{exibirResumo()}{exibirResumo()}}
+{\footnotesize\ttfamily \label{class_pedido_ac3d5ebb24585b3b48c8cea481d9e612b} 
+void Pedido\+::exibir\+Resumo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+void \doxylink{class_pedido_ac3d5ebb24585b3b48c8cea481d9e612b}{Pedido\+::exibir\+Resumo() const }\{ double total = 0; print\+Line(); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Confirmacao do pedido\+:"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Cliente\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} cliente \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Pedido\+:"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; for (const auto\& item \+: itens) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+quantidade \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}x "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+nome \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{} -\/ "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+R\$"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} item.\+preco \texorpdfstring{$\ast$}{*} item.\+quantidade \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; total += item.\+preco \texorpdfstring{$\ast$}{*} item.\+quantidade; \} std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Endereco\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} endereco \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Total a pagar\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+R\$"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} total \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; print\+Line(); \} \Hypertarget{class_pedido_ad972d758a8458c698b7b215f55ab959a}\index{Pedido@{Pedido}!setEndereco@{setEndereco}}
+\index{setEndereco@{setEndereco}!Pedido@{Pedido}}
+\doxysubsubsection{\texorpdfstring{setEndereco()}{setEndereco()}}
+{\footnotesize\ttfamily \label{class_pedido_ad972d758a8458c698b7b215f55ab959a} 
+void Pedido\+::set\+Endereco (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{end}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_pedido_ad972d758a8458c698b7b215f55ab959a}{Pedido\+::set\+Endereco(const std\+::string\& end)} \{ std\+::string ende=end; while(1)\{ if(validar\+Senha(ende))\{ std\+::cout\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}"{}\+Endereco Invalido!"{}; std\+::cout\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}"{} Digite o endreco novamente\+:"{}\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET; std\+::getline(std\+::cin,ende); \} else\{ endereco = ende; break; \} \} \} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+PROJETO/hpp/Pedido.\+hpp\end{DoxyCompactItemize}

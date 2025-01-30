@@ -1,0 +1,40 @@
+\doxysection{Entregador Class Reference}
+\hypertarget{class_entregador}{}\label{class_entregador}\index{Entregador@{Entregador}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_entregador_a451d430606148e98e047fa3bef68ddbc}\label{class_entregador_a451d430606148e98e047fa3bef68ddbc} 
+{\bfseries Entregador} (std\+::vector$<$ \mbox{\hyperlink{class_pedido}{Pedido}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}pedidos\+Ref)
+\item 
+void \mbox{\hyperlink{class_entregador_a91e1a5616b4569b8a5239d5bbcf40f29}{exibir\+Pedidos\+Prontos}} () const
+\item 
+void \mbox{\hyperlink{class_entregador_a3a48b494220bb6da2ff9e358b347a787}{marcar\+Pedido\+Entregue}} (const std\+::string \&nome\+Cliente)
+\item 
+void \mbox{\hyperlink{class_entregador_a710705c58e78309e5b49c353d4d9f108}{actions\+\_\+entregador}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_entregador_a710705c58e78309e5b49c353d4d9f108}\index{Entregador@{Entregador}!actions\_entregador@{actions\_entregador}}
+\index{actions\_entregador@{actions\_entregador}!Entregador@{Entregador}}
+\doxysubsubsection{\texorpdfstring{actions\_entregador()}{actions\_entregador()}}
+{\footnotesize\ttfamily \label{class_entregador_a710705c58e78309e5b49c353d4d9f108} 
+void Entregador\+::actions\+\_\+entregador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_entregador_a710705c58e78309e5b49c353d4d9f108}{Entregador\+::actions\+\_\+entregador()} \{ int opcao; do \{ print\+Line(); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} BOLD \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Bem vindo Entregador"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}1. Ver pedidos prontos"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}2. Marcar pedido como entregue"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}3. Sair"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; print\+Line(); opcao = validar\+Entrada\+Numerica(); if (opcao == 1) \{ \doxylink{class_entregador_a91e1a5616b4569b8a5239d5bbcf40f29}{exibir\+Pedidos\+Prontos()}; \} else if (opcao == 2) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Digite o nome do cliente\+: "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET; std\+::string nome; std\+::getline(std\+::cin, nome); marcar\+Pedido\+Entregue(nome); \} \} while (opcao != 3); \} \Hypertarget{class_entregador_a91e1a5616b4569b8a5239d5bbcf40f29}\index{Entregador@{Entregador}!exibirPedidosProntos@{exibirPedidosProntos}}
+\index{exibirPedidosProntos@{exibirPedidosProntos}!Entregador@{Entregador}}
+\doxysubsubsection{\texorpdfstring{exibirPedidosProntos()}{exibirPedidosProntos()}}
+{\footnotesize\ttfamily \label{class_entregador_a91e1a5616b4569b8a5239d5bbcf40f29} 
+void Entregador\+::exibir\+Pedidos\+Prontos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+void \doxylink{class_entregador_a91e1a5616b4569b8a5239d5bbcf40f29}{Entregador\+::exibir\+Pedidos\+Prontos() const }\{ print\+Line(); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} BOLD \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+CIANO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Pedidos prontos\+:"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; int count = 1; for (auto\& pedido \+: \texorpdfstring{$\ast$}{*}pedidos) \{ if (pedido-\/\texorpdfstring{$>$}{>}get\+Status() == "{}\+Pedido pronto"{}) \{ std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+BRANCO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} count++ \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}. "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} pedido-\/\texorpdfstring{$>$}{>}get\+Cliente() \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}. "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} pedido-\/\texorpdfstring{$>$}{>}get\+Endereco() \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\textbackslash{}n"{}; \} \} if (count == 1) std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Nenhum pedido pronto."{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; print\+Line(); \} \Hypertarget{class_entregador_a3a48b494220bb6da2ff9e358b347a787}\index{Entregador@{Entregador}!marcarPedidoEntregue@{marcarPedidoEntregue}}
+\index{marcarPedidoEntregue@{marcarPedidoEntregue}!Entregador@{Entregador}}
+\doxysubsubsection{\texorpdfstring{marcarPedidoEntregue()}{marcarPedidoEntregue()}}
+{\footnotesize\ttfamily \label{class_entregador_a3a48b494220bb6da2ff9e358b347a787} 
+void Entregador\+::marcar\+Pedido\+Entregue (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+Cliente}{}\end{DoxyParamCaption})}
+
+void \doxylink{class_entregador_a3a48b494220bb6da2ff9e358b347a787}{Entregador\+::marcar\+Pedido\+Entregue(const std\+::string\& nome\+Cliente)} \{ for (auto\& pedido \+: \texorpdfstring{$\ast$}{*}pedidos) \{ if (pedido-\/\texorpdfstring{$>$}{>}get\+Status() == "{}\+Pedido pronto"{} \&\& pedido-\/\texorpdfstring{$>$}{>}get\+Cliente() == nome\+Cliente) \{ pedido-\/\texorpdfstring{$>$}{>}atualizar\+Status("{}\+Entregue"{}); std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERDE \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Pedido para "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} nome\+Cliente \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{} entregue!"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; return; \} \} std\+::cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} FG\+\_\+\+VERMELHO \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+Pedido nao encontrado para o cliente "{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} nome\+Cliente \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} RESET \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std\+::endl; \} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+PROJETO/hpp/Entregador.\+hpp\end{DoxyCompactItemize}

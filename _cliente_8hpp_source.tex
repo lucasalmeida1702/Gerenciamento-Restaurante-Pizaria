@@ -1,0 +1,80 @@
+\doxysection{Cliente.\+hpp}
+\hypertarget{_cliente_8hpp_source}{}\label{_cliente_8hpp_source}\index{PROJETO/hpp/Cliente.hpp@{PROJETO/hpp/Cliente.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CLIENTE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CLIENTE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Pedido.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Cardapio.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}utils.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Cliente\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ std::string>\ clientes;\ }
+\DoxyCodeLine{00014\ \ \ \ \ std::map<std::string,\ int>\ pontosRecompensa;\ }
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ username;}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ senha;}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<Pedido*>*\ listaPedidos;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_cardapio}{Cardapio}}*\ cardapio;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ autenticar(\textcolor{keyword}{const}\ std::string\&\ user,\ \textcolor{keyword}{const}\ std::string\&\ pass);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ Cliente(\mbox{\hyperlink{class_cardapio}{Cardapio}}*\ cardapioRef,\ std::vector<Pedido*>*\ pedidosRef);\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cliente_a8b6e3ecf6390c9c5463083143a624df5}{criarConta}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cliente_a11acedae8b0868fa2233b7e5105b14bc}{entrar}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cliente_a1e83caae63ed0959c97bfa2b2b0a6bf6}{alterarSenha}}();}
+\DoxyCodeLine{00130\ \ \ \ \ aplicarDescontoSeDisponivel(valorTotal);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ std::cout\ <<\ FG\_CIANO\ <<\ "{}O\ valor\ total\ do\ pedido\ é:\ R\$\ "{}\ <<\ valorTotal\ <<\ RESET\ <<\ std::endl;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ std::cout\ <<\ FG\_CIANO\ <<\ "{}Digite\ o\ endereço\ de\ entrega:\ "{}\ <<\ RESET;}
+\DoxyCodeLine{00135\ \ \ \ \ std::string\ endereco;}
+\DoxyCodeLine{00136\ \ \ \ \ std::getline(std::cin,\ endereco);}
+\DoxyCodeLine{00137\ \ \ \ \ novoPedido-\/>setEndereco(endereco);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ printLine();}
+\DoxyCodeLine{00140\ \ \ \ \ std::cout\ <<\ FG\_CIANO\ <<\ "{}Confirmação\ do\ pedido:"{}\ <<\ RESET\ <<\ std::endl;}
+\DoxyCodeLine{00141\ \ \ \ \ novoPedido-\/>exibirResumo();}
+\DoxyCodeLine{00142\ \ \ \ \ printLine();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ std::string\ confirmar;}
+\DoxyCodeLine{00145\ \ \ \ \ do\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ std::cout\ <<\ FG\_CIANO\ <<\ "{}Confirmar\ pedido?\ (s/n):\ "{}\ <<\ RESET;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ std::cin\ >>\ confirmar;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ if\ (!validarEntradaSimNao(confirmar))\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ FG\_VERMELHO\ <<\ "{}Entrada\ inválida.\ Digite\ 's'\ para\ Sim\ ou\ 'n'\ para\ Não."{}\ <<\ RESET\ <<\ std::endl;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \}\ while\ (!validarEntradaSimNao(confirmar));}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ if\ (confirmar\ ==\ "{}s"{}\ ||\ confirmar\ ==\ "{}S"{})\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ listaPedidos-\/>push\_back(novoPedido);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ std::cout\ <<\ FG\_VERDE\ <<\ "{}Pedido\ realizado\ com\ sucesso!"{}\ <<\ RESET\ <<\ std::endl;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ acumularPontos(valorTotal);\ //\ Acumula\ pontos\ após\ o\ pedido\ ser\ confirmado}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ else\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ delete\ novoPedido;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ std::cout\ <<\ FG\_VERMELHO\ <<\ "{}Pedido\ cancelado."{}\ <<\ RESET\ <<\ std::endl;}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \}*/}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cliente_a788a5fee0ad026c8fb5eb85d702d6945}{realizarPedido}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cliente_a9ad0b779783d67a23fb212d5369784d5}{exibirStatusPedido}}();}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cliente_af951787df104920ca6446dc96d4b973e}{actions\_cliente}}();}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cliente_a0ecd8114fb7ca201a2ef1766aeeb55bb}{menuInicial}}(\mbox{\hyperlink{class_cardapio}{Cardapio}}*\ cardapio,\ std::vector<Pedido*>*\ listaPedidos);}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\&\ getClientes();}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cliente_a050235b69bec041e9dfcccbb8354c2ab}{acumularPontos}}(\textcolor{keywordtype}{double}\ valorPedido);}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{comment}{/*"{}void\ Cliente::exibirPontos()\ \{}}
+\DoxyCodeLine{00239\ \textcolor{comment}{\ \ \ \ int\ pontos\ =\ pontosRecompensa[username];}}
+\DoxyCodeLine{00240\ \textcolor{comment}{\ \ \ \ std::cout\ <<\ FG\_CIANO\ <<\ "{}Voce\ tem\ "{}\ <<\ pontos\ <<\ "{}\ pontos\ acumulados."{}\ <<\ RESET\ <<\ std::endl;}}
+\DoxyCodeLine{00241\ \textcolor{comment}{\ \ \ \ \}*/}}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{void}\ exibirPontos();}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_cliente_a7cb9e991e441f169beb6640e5bd1d1ac}{aplicarDescontoSeDisponivel}}(\textcolor{keywordtype}{double}\&\ valorPedido);}
+\DoxyCodeLine{00256\ \};}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CLIENTE\_HPP}}
+
+\end{DoxyCode}

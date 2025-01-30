@@ -1,0 +1,33 @@
+\doxysection{Fornecedor.\+hpp}
+\hypertarget{_fornecedor_8hpp_source}{}\label{_fornecedor_8hpp_source}\index{PROJETO/hpp/Fornecedor.hpp@{PROJETO/hpp/Fornecedor.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FORNECEDOR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FORNECEDOR\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}utils.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Fornecedor\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_fornecedor_1_1_info}{Info}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ std::string\ nome;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ std::string\ produto;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ std::string\ endereco;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::string\ telefone;}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ Fornecedor();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fornecedor_adf594315351e73c8edf45c16aac004ee}{cadastrarFornecedor}}(\textcolor{keyword}{const}\ std::string\&\ nome,\ \textcolor{keyword}{const}\ std::string\&\ produto,\ \textcolor{keyword}{const}\ std::string\&\ endereco,\ \textcolor{keyword}{const}\ std::string\&\ telefone);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fornecedor_a55afa9151361ef537812348a3bac15ea}{editarFornecedorPorIndice}}(\textcolor{keywordtype}{int}\ indice);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fornecedor_aa6e3e4d03a3071adb4789f694a3ed127}{excluirFornecedor}}(\textcolor{keyword}{const}\ std::string\&\ nome);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_fornecedor_a8dac2706f6321af8db93869bb7c58e36}{exibirFornecedores}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \ \ std::vector<Info>\ fornecedores;}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FORNECEDOR\_HPP}}
+
+\end{DoxyCode}
